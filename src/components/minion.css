@@ -1,0 +1,26 @@
+@keyframes eyeMovement {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px); /* Adjust the value to control the movement distance */
+    }
+  }
+  
+  .minionEyes {
+    animation: eyeMovement 2s infinite; /* Adjust time as needed */
+  }
+
+  @keyframes wiggle {
+    0%, 100% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+.hair {
+    animation: wiggle 1s ease-in-out infinite;
+}
+  

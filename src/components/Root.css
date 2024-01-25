@@ -17,4 +17,11 @@
       background-position: center 0;
     }
   }
+
+  /* Root.css or another CSS file */
+
+.gradientBackground {
+  background: linear-gradient(to bottom right, #A4FCAC, #B0FFB5);
+}
+
   

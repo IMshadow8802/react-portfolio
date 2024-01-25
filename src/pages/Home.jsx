@@ -1,8 +1,10 @@
-import React from "react";
+import { Canvas } from "@react-three/fiber";
+import { Suspense, useEffect, useRef, useState } from "react";
 import useThemeStore from "../useThemeStore";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import Minion from "../components/Minion";
 
 const Home = () => {
   const { isDarkMode } = useThemeStore();
@@ -14,14 +16,6 @@ const Home = () => {
     animate: { y: 0, opacity: 1 },
     transition: { duration: 0.5 },
     whileHover: { scale: 1.1 },
-  };
-
-  const buttonVariants = {
-    hover: {
-      backgroundColor: "#fbbf24", // yellow color for hover
-      color: "#000000", // text color change if needed
-      transition: { duration: 0.5 },
-    },
   };
 
   // Adjust text size based on screen size
@@ -75,6 +69,9 @@ const Home = () => {
         </button>
         </div>
       </div>
+      <div className="">
+    {!isSmallScreen && <Minion />}
+</div>
     </div>
   );
 };
