@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hover-fill-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 100%;
+    background-color: #fbbf24; /* your desired fill color */
+    transition: left 0.8s ease;
+    z-index: 0;
+  }
+  
+  .hover-fill-effect:hover::before {
+    left: 0;
+  }
+  
+  .hover-fill-effect span, .hover-fill-effect div {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hover-fill-effect:hover span {
+    color: white;
+  }
+  
+  

@@ -1,0 +1,20 @@
+.bottomWaveBackground {
+    background: linear-gradient(to top, #fbbf24 20%, transparent 20%);
+    background-size: 100% 200%;
+    background-position: center bottom;
+    transition: background-position 0.5s, color 0.5s;
+  }
+  
+  .bottomWaveBackground.animate {
+    animation: moveWave 20s linear infinite;
+  }
+  
+  @keyframes moveWave {
+    0%, 100% {
+      background-position: center 100%;
+    }
+    50% {
+      background-position: center 0;
+    }
+  }
+  
